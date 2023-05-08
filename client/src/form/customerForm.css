@@ -1,0 +1,79 @@
+
+#myform{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    position: relative;
+    /* top: 0px; */
+    margin-left: 80px;
+    width: 45%;
+}
+label{
+    font-size: 1.5rem;
+}
+#ctopic{
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translateY(10px);
+}
+
+/* input{
+    width: 30vw;
+    margin: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-left: 20px;
+    font-size: 1.5rem;
+} */
+#outlined-basic{
+    width: 405px;
+}
+
+#reset{
+    margin-left: 10px;
+}
+submit:hover{
+    width: 105px;
+    height: 45px;
+    font-weight: bold;
+}
+.reset:hover{
+    width: 105px;
+    height: 45px;
+    font-weight: bold;
+}
+
+.submit:nth-child(1){
+    background-color: rgb(48, 106, 214);
+}
+.reset:nth-child(2){
+    background-color: rgb(237, 92, 60);
+}
+.btn-form{
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(232, 163, 4);
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    border: transparent;
+}
+#imageDiv{
+width: 55%;
+height: 100vh;
+margin-top: 10px;
+}
+#outerDiv{
+    display: flex;
+    flex-direction: row;
+}
+#cusImg{
+    width: 642px;
+}
+#sltGender{
+    width: 10px;
+    
+}
