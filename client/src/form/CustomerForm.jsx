@@ -19,6 +19,13 @@ export const CustomerForm = () => {
   const inputRef = useRef("Hello");
 
   useEffect(() => {
+    Axios.get("http://localhost:3001/api/get").then((response)=>{
+     console.log(response.data);
+     // setFormDatails(response.data);
+    })
+   }, []);
+
+  useEffect(() => {
   inputRef.current.focus();
 }, []);
 
@@ -26,7 +33,15 @@ export const CustomerForm = () => {
   const handleonsubmit =(e)=>{
     e.preventDefault();
     
-   //
+    Axios.post("http://localhost:3001/api/insert",{
+      firstName: firstName,
+       lastName: lastName,
+        salary:salary,
+        address : address,
+    }).then(() =>{
+      alert("sucsess..!")
+    });
+
 
     const formData ={
         firstName,
