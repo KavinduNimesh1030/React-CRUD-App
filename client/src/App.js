@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { CustomerForm } from './form/CustomerForm';
+import { Routing } from './route/Routing';
 
 function App() {
   return (
     <div className="App">
-     <CustomerForm/>
+     <Routing/>
     </div>
   );
 }
