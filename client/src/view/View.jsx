@@ -89,7 +89,7 @@ export const View = () => {
             <StyledTableCell align="left">{details.lastName}</StyledTableCell>
             <StyledTableCell align="left">{details.address}</StyledTableCell>
             <StyledTableCell align="left">{details.salary}</StyledTableCell>
-            <StyledTableCell align="left">
+            <StyledTableCell align="left" onClick={()=>alert("Deleted")}>
             <IconButton aria-label="delete" color='warning'>
              <DeleteIcon />
              </IconButton>
