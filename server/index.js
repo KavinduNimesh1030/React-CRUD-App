@@ -30,6 +30,17 @@ app.post("/api/insert",(req, res)=>{
     })
 });
 
+app.delete("/api/delete",(req, res)=>{
+    const cus_id = req.body.cus_id
+    console.log("cus id "+cus_id);
+    const sql = "DELETE FROM customer WHERE cusId = ?"
+    db.query(sql,cus_id,(err,result)=>{
+        console.log(err);
+        // res.send("hell world2");
+       
+    })
+});
+
 
 app.get("/api/get",(req, res)=>{
     const sqlInsert = "SELECT * FROM customer"

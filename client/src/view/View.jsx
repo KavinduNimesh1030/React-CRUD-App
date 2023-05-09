@@ -52,18 +52,11 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-//Delete Customer
-const deleteCusHandleOnClick =(cusId)=>{
-  
-    Axios.delete("http://localhost:3001/api/delete",{
-      cusId : cusId
-    }).then(() =>{
-      alert("sucsess..!")
-    });
-};
+
 
 export const View = () => {
     const [stuData,setStuData] = useState([]);
+    const [cusId,setCusId] = useState();
 
     useEffect(()=>{
       Axios.get("http://localhost:3001/api/get").then((response)=>{
@@ -71,6 +64,15 @@ export const View = () => {
         setStuData(response.data);
        })
       },[])
+
+      //Delete Customer
+      const deleteCusHandleOnClick =(cus_id)=>{
+
+        alert(cus_id);
+        setCusId(cus_id);
+        Axios.delete("http://localhost:3001/api/delete",cus_id)
+       
+      };
 
   return (
     //mui table
