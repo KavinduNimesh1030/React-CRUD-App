@@ -52,6 +52,11 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
+//Delete Customer
+const deleteCusHandleOnClick =(cusId)=>{
+    alert(cusId);
+};
+
 export const View = () => {
     const [stuData,setStuData] = useState([]);
 
@@ -89,7 +94,7 @@ export const View = () => {
             <StyledTableCell align="left">{details.lastName}</StyledTableCell>
             <StyledTableCell align="left">{details.address}</StyledTableCell>
             <StyledTableCell align="left">{details.salary}</StyledTableCell>
-            <StyledTableCell align="left" onClick={()=>alert("Deleted")}>
+            <StyledTableCell align="left" onClick={()=>deleteCusHandleOnClick(details.cusId)}>
             <IconButton aria-label="delete" color='warning'>
              <DeleteIcon />
              </IconButton>
