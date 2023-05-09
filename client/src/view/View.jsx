@@ -54,7 +54,12 @@ const rows = [
 
 //Delete Customer
 const deleteCusHandleOnClick =(cusId)=>{
-    alert(cusId);
+  
+    Axios.delete("http://localhost:3001/api/delete",{
+      cusId : cusId
+    }).then(() =>{
+      alert("sucsess..!")
+    });
 };
 
 export const View = () => {
