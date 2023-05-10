@@ -56,7 +56,6 @@ const rows = [
 
 export const View = () => {
     const [stuData,setStuData] = useState([]);
-    const [cusId,setCusId] = useState();
 
     useEffect(()=>{
       Axios.get("http://localhost:3001/api/get").then((response)=>{
@@ -66,11 +65,11 @@ export const View = () => {
       },[])
 
       //Delete Customer
-      const deleteCusHandleOnClick =(cus_id)=>{
-
-        alert(cus_id);
-        setCusId(cus_id);
-        Axios.delete("http://localhost:3001/api/delete",cus_id)
+      const deleteCusHandleOnClick =(cusId)=>{
+        Axios.delete(`http://localhost:3001/api/delete/${cusId}`).then((response)=>{
+          alert(response.data);
+        
+         })
        
       };
 

@@ -30,13 +30,13 @@ app.post("/api/insert",(req, res)=>{
     })
 });
 
-app.delete("/api/delete",(req, res)=>{
-    const cus_id = req.body.cus_id
-    console.log("cus id "+cus_id);
+app.delete("/api/delete/:cusId",(req, res)=>{
+    const cusId = req.params.cusId
+    console.log("cus id "+cusId);
     const sql = "DELETE FROM customer WHERE cusId = ?"
-    db.query(sql,cus_id,(err,result)=>{
+    db.query(sql, [cusId],(err,result)=>{
         console.log(err);
-        // res.send("hell world2");
+        res.send("Deleted..!");
        
     })
 });
